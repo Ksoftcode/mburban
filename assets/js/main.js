@@ -110,17 +110,19 @@
   window.addEventListener('load', aosInit);
 
   /**
-   * 32-Day fixed countdown from “now”
+   * Fixed Date Countdown
+   * (Example: Ends March 1, 2025 at 00:00 UTC)
+   * -----------------------------------------
+   * If you want a different fixed date/time,
+   * change the string below to your desired date.
    */
-  // We set a single endTime: now + 30 days (in milliseconds)
-  const endTime = new Date().getTime() + (32 * 24 * 60 * 60 * 1000);
+  const endTime = new Date("2025-03-01T00:00:00Z").getTime();
 
-  // Update each .countdown element based on the shared endTime
   function updateCountDown(countDownItem) {
     const now = new Date().getTime();
     const timeleft = endTime - now;
 
-    // If time is up, set everything to 0 or show a message
+    // If time is up, show all zeros
     if (timeleft <= 0) {
       countDownItem.querySelector('.count-days').textContent = 0;
       countDownItem.querySelector('.count-hours').textContent = 0;
@@ -129,25 +131,22 @@
       return;
     }
 
-    // Otherwise calculate remaining days/hours/minutes/seconds
+    // Otherwise calculate days/hours/minutes/seconds
     const days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
     const hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
-    // Update the DOM for this countdown instance
+    // Inject them into .count-days, .count-hours, etc.
     countDownItem.querySelector('.count-days').textContent = days;
     countDownItem.querySelector('.count-hours').textContent = hours;
     countDownItem.querySelector('.count-minutes').textContent = minutes;
     countDownItem.querySelector('.count-seconds').textContent = seconds;
   }
 
-  // For each element that has .countdown, update and tick every second
+  // For each .countdown element, update immediately & set interval
   document.querySelectorAll('.countdown').forEach(function(countDownItem) {
-    // Initial update
     updateCountDown(countDownItem);
-
-    // Update every second
     setInterval(function() {
       updateCountDown(countDownItem);
     }, 1000);
