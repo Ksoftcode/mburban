@@ -15,8 +15,14 @@
   function toggleScrolled() {
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
-    if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+    if (
+      !selectHeader.classList.contains('scroll-up-sticky') &&
+      !selectHeader.classList.contains('sticky-top') &&
+      !selectHeader.classList.contains('fixed-top')
+    ) return;
+    window.scrollY > 100
+      ? selectBody.classList.add('scrolled')
+      : selectBody.classList.remove('scrolled');
   }
 
   document.addEventListener('scroll', toggleScrolled);
@@ -43,7 +49,6 @@
         mobileNavToogle();
       }
     });
-
   });
 
   /**
@@ -75,7 +80,9 @@
 
   function toggleScrollTop() {
     if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+      window.scrollY > 100
+        ? scrollTop.classList.add('active')
+        : scrollTop.classList.remove('active');
     }
   }
   scrollTop.addEventListener('click', (e) => {
@@ -103,25 +110,44 @@
   window.addEventListener('load', aosInit);
 
   /**
-   * Countdown timer
+   * 32-Day fixed countdown from “now”
    */
-  function updateCountDown(countDownItem) {
-    const timeleft = new Date(countDownItem.getAttribute('data-count')).getTime() - new Date().getTime();
+  // We set a single endTime: now + 30 days (in milliseconds)
+  const endTime = new Date().getTime() + (32 * 24 * 60 * 60 * 1000);
 
+  // Update each .countdown element based on the shared endTime
+  function updateCountDown(countDownItem) {
+    const now = new Date().getTime();
+    const timeleft = endTime - now;
+
+    // If time is up, set everything to 0 or show a message
+    if (timeleft <= 0) {
+      countDownItem.querySelector('.count-days').textContent = 0;
+      countDownItem.querySelector('.count-hours').textContent = 0;
+      countDownItem.querySelector('.count-minutes').textContent = 0;
+      countDownItem.querySelector('.count-seconds').textContent = 0;
+      return;
+    }
+
+    // Otherwise calculate remaining days/hours/minutes/seconds
     const days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
     const hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
-    countDownItem.querySelector('.count-days').innerHTML = days;
-    countDownItem.querySelector('.count-hours').innerHTML = hours;
-    countDownItem.querySelector('.count-minutes').innerHTML = minutes;
-    countDownItem.querySelector('.count-seconds').innerHTML = seconds;
-
+    // Update the DOM for this countdown instance
+    countDownItem.querySelector('.count-days').textContent = days;
+    countDownItem.querySelector('.count-hours').textContent = hours;
+    countDownItem.querySelector('.count-minutes').textContent = minutes;
+    countDownItem.querySelector('.count-seconds').textContent = seconds;
   }
 
+  // For each element that has .countdown, update and tick every second
   document.querySelectorAll('.countdown').forEach(function(countDownItem) {
+    // Initial update
     updateCountDown(countDownItem);
+
+    // Update every second
     setInterval(function() {
       updateCountDown(countDownItem);
     }, 1000);
