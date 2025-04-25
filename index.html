@@ -4,10 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>MBUrban | Home</title>
+  <title>Home | MB URBAN</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
-
+  <style>
+    .signature-tilted {
+      transform: rotate(-5deg);
+      display: inline-block;
+    }
+  </style>
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -15,44 +20,51 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: MBUrban
-  * Template URL: https://bootstrapmade.com/MBUrban-free-coming-soon-bootstrap-theme/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center px-3 fixed-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">MBUrban</h1>
+        <img src="assets/img/logo.png" alt="">
+        <!-- <h1 class="sitename">MB URBAN</h1> -->
+        <h1 class="sitename">
+          <span class="sitename__m">M</span><span class="sitename__b">B</span><span class="sitename__rest"> URBAN</span>
+        </h1>
+        
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
-          <!-- <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li> -->
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
+
+      <div class="header-social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
 
     </div>
   </header>
@@ -60,57 +72,533 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section transparent-background">
+    <section id="hero" class="hero section">
 
-      <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <h2>MBUrban<br></h2>
-            <p>We are still working on our website. Stay tuned for updates!</p>
-          </div>
-          <div class="countdown d-flex justify-content-center" data-count="2025/12/3">
-            <div>
-              <h3 class="count-days">32</h3>
-              <h4>Days</h4>
-            </div>
-            <div>
-              <h3 class="count-hours">12</h3>
-              <h4>Hours</h4>
-            </div>
-            <div>
-              <h3 class="count-minutes">49</h3>
-              <h4>Minutes</h4>
-            </div>
-            <div>
-              <h3 class="count-seconds">21</h3>
-              <h4>Seconds</h4>
-            </div>
-          </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-lg-5 hero-newsletter">
-            <p>Subscribe now to get the latest updates!</p>
-            <form action="forms/newsletter.php" method="post" class="php-email-form">
-              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-            </form>
-          </div>
+        <div class="row align-items-center content">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h2>Shaping the Future, One Exquisite Home at a Time</h2>
+            <p class="lead"><p class="lead">Merging world-class design, uncompromising quality, and sustainable innovation to redefine modern living across the continent</p>
 
-          <div class="social-links">
-            <a href="#"><i class="bi bi-twitter-x"></i></a>
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <div class="cta-buttons" data-aos="fade-up" data-aos-delay="300">
+              <a href="#faq" class="btn btn-primary">Property Inquiry</a>
+              <a href="#contact" class="btn btn-outline">Let's Connect</a>
+            </div>
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+              <div class="stat-item">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">100+</span>
+                <span class="stat-label">Projects Completed</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Happy Clients</span>
+              </div>
+            </div>
           </div>
-
+          <div class="col-lg-6">
+            <div class="hero-image">
+              <img src="assets/img/profile/profile-1.webp" alt="Portfolio Hero Image" class="img-fluid" data-aos="zoom-out" data-aos-delay="300">
+              <div class="shape-1"></div>
+              <div class="shape-2"></div>
+            </div>
+          </div>
         </div>
+
       </div>
 
     </section><!-- /Hero Section -->
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">MBUrban</strong> <span>All Rights Reserved</span></p>
+    <!-- About Section -->
+    <section id="about" class="about section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About Us</h2>
+        <div class="title-shape">
+          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+          </svg>
+        </div>
+        <p>Creating spaces that inspire, redefine luxury, and champion sustainability across Africa.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100"> <!-- div1 start -->
+
+        <div class="row align-items-center">
+          <div class="col-lg-6 position-relative" data-aos="fade-right" data-aos-delay="200">
+            <div class="about-image">
+              <img src="assets/img/profile/hero-bg.jpg" alt="Profile Image" class="img-fluid rounded-4">
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="about-content">
+              <!-- <span class="subtitle">About Us</span>
+
+              <h2>Urban Developer &amp; Visionary Architect</h2>
+
+              <p class="lead mb-4">MB Urban has redefined the standards of residential and commercial developments through exquisite design, uncompromising quality, and timely delivery.</p>
+
+              <p class="mb-4">With a visionary approach led by Mr. Moyosore Bamigbade, MB Urban integrates cutting-edge architecture, eco-friendly construction, and sustainable urban planning, shaping Africa’s urban landscapes for a vibrant, environmentally responsible future.</p> -->
+              <!-- Founder Profile -->
+              <!-- <span class="subtitle">Moyosore Bamigbade</span> -->
+              <h2>Founder &amp; Chairman</h2>
+              <p class="lead mb-4">Moyosore is an award-winning architect and entrepreneur with dual Master’s degrees in Architecture and the Business of Architecture, and an MBA in Real Estate and Finance from LSE. He has led over 150 landmark projects across Africa, Europe, and the Middle East, blending innovative design with strategic vision.</p>
+              <ul class="list-unstyled">
+                <li><strong>Expertise:</strong> Architecture, Urban Development, Strategic Planning</li>
+                <li><strong>Education:</strong> LSE MBA (Real Estate & Finance), Dual Master’s in Architecture</li>
+                <li><strong>Vision:</strong> Creating sustainable, world-class living spaces that redefine luxury</li>
+              </ul>
+              <!-- Founder Profile End -->
+               <!-- <br> -->
+              <!-- Co-Founder Profile -->
+              <!-- <span class="subtitle">Princesse Ejirogene Bamigbade</span>
+              <h2>Co-Founder &amp; Healthcare Entrepreneur</h2>
+              <p class="lead mb-4">Princesse is a pediatric nurse and accomplished healthcare entrepreneur with nine years of clinical and informatics experience. She holds a Master’s in Maternal and Child Health Nursing and drives advocacy and innovation through Nightingales & Doctors Outfit Ltd.</p>
+              <ul class="list-unstyled">
+                <li><strong>Expertise:</strong> Pediatric Nursing, Health Informatics, Leadership</li>
+                <li><strong>Awards:</strong> 2019 FOHNIN Best Candidate (Pediatric Nursing)</li>
+                <li><strong>Passion:</strong> Advancing maternal and child health initiatives across Africa</li>
+              </ul> -->
+              <!-- Co-Founder Profile End-->
+
+              <div class="personal-info">
+                <div class="row g-4">
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Founder</span>
+                      <span class="value">Moyosore Bamigbade</span>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Contact</span>
+                      <span class="value">+234 (0) 7036532200</span>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Locations</span>
+                      <span class="value">Lagos, Abuja, Abidjan</span>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Email</span>
+                      <span class="value">moyosore.bamigbade@gmail.com</span>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Specialization</span>
+                      <span class="value">Real Estate Development</span>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Nationality</span>
+                      <span class="value">Nigerian</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="signature mt-4">
+                <div class="signature-image">
+                  <img src="assets/img/misc/signature.png" alt="" class="img-fluid signature-tilted">
+                </div>
+                <div class="signature-info">
+                  <h4>Moyosore Bamigbade</h4>
+                  <p>Founder & Chairman, MB Urban</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div> <!-- div1 end -->
+
+    </section><!-- /About Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4 skills-animation">
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-box">
+              <h3>Architectural Excellence</h3>
+          <p>Innovative designs blending creativity and functionality.</p>
+              <span class="text-end d-block">95%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-box">
+              <h3>Eco-Friendly Construction</h3>
+          <p>Sustainable building practices and green infrastructure.</p>
+              <span class="text-end d-block">90%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-box">
+              <h3>Project Delivery</h3>
+          <p>Timely completion with uncompromising quality.</p>
+              <span class="text-end d-block">95%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="skill-box">
+              <h3>Integrated Development</h3>
+          <p>Seamless in-house expertise across the development value chain.</p>
+              <span class="text-end d-block">80%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <div class="title-shape">
+          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+          </svg>
+        </div>
+        <p>Providing integrated real estate solutions that redefine excellence, sustainability, and innovation.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center">
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <h2 class="fw-bold mb-4 servies-title">Tailored Real Estate Development Solutions</h2>
+            <p class="mb-4">From visionary architecture to sustainable construction, we manage every phase of real estate development with precision and passion.</p>
+            <a href="#" class="btn btn-outline-primary">See all services</a>
+          </div>
+          <div class="col-lg-8">
+            <div class="row g-4">
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-item">
+                  <i class="bi bi-activity icon"></i>
+                <h3><a href="service-details.html">Real Estate Development</a></h3>
+                <p>Expert development of residential and commercial properties, delivering iconic, sustainable, and efficient living spaces.</p>
+                </div>
+              </div><!-- End Service Item -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-item">
+                  <i class="bi bi-easel icon"></i>
+                  <h3><a href="service-details.html">Design & Engineering</a></h3>
+                  <p>Comprehensive architectural, structural, and environmental design, ensuring functionality meets aesthetic brilliance.</p>
+                </div>
+              </div><!-- End Service Item -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-item">
+                  <i class="bi bi-broadcast icon"></i>
+                  <h3><a href="service-details.html">Contracting & Construction</a></h3>
+                  <p>High-quality civil, mechanical, electrical, plumbing, and landscaping contracting, delivered to the highest industry standards.</p>
+                </div>
+              </div><!-- End Service Item -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="service-item">
+                  <i class="bi bi-bounding-box-circles icon"></i>
+                  <h3><a href="service-details.html">Asset & Facility Management</a></h3>
+                  <p>Efficient post-handover solutions including facilities management, security services, and asset maintenance for lasting value.</p>
+                </div>
+              </div><!-- End Service Item -->
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+
+<!-- Property Inquiry (survey-form style) -->
+<section id="faq" class="faq section light-background">
+  <div class="container" data-aos="fade-up" data-aos-delay="200">
+
+    <!-- Section Title -->
+    <div class="section-title text-center mb-4">
+      <h2>Property Inquiry Form</h2>
+      <div class="title-shape mx-auto">
+        <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10"
+                fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </div>
+      <p>Fill in your details to receive the latest updates on apartments and prices</p>
+    </div>
+
+    <!-- Survey Form -->
+    <form id="inquiryForm" class="survey property-inquiry-section php-email-form" action="forms/contact.php" method="post">
+
+      <!-- Progress Bar -->
+      <div class="progressbar" role="progressbar"
+           aria-valuemin="1" aria-valuemax="7" aria-valuenow="1"
+           aria-valuetext="Step 1 of 7">
+        <span class="progressbar__step active"></span>
+        <span class="progressbar__step"></span>
+        <span class="progressbar__step"></span>
+        <span class="progressbar__step"></span>
+        <span class="progressbar__step"></span>
+        <span class="progressbar__step"></span>
+        <span class="progressbar__step"></span>
+      </div>
+
+      <!-- STEP 1 -->
+      <!-- <section class="survey__panel survey__panel--current" data-index="1" data-requirement="option">
+        <h4><b>What type of property are you interested in?</b></h4>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="propertyType" id="dontKnowYet" value="dontKnowYet">
+          <label class="form-check-label" for="dontKnowYet">I Don’t know yet</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="propertyType" id="apartments" value="apartments">
+          <label class="form-check-label" for="apartments">Apartments</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="propertyType" id="villas" value="villas">
+          <label class="form-check-label" for="villas">Villas</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="propertyType" id="townhouses" value="townhouses">
+          <label class="form-check-label" for="townhouses">Townhouses</label>
+        </div>
+        <p class="error-message"></p>
+      </section> -->
+
+      <!-- STEP 2 -->
+      <!-- <section class="survey__panel" data-index="2" data-requirement="option">
+        <h4><b>What is your purpose of purchase?</b></h4>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="purchasePurpose" id="forMyself" value="forMyself">
+          <label class="form-check-label" for="forMyself">For myself</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="purchasePurpose" id="investing" value="investing">
+          <label class="form-check-label" for="investing">Investing</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="purchasePurpose" id="lease" value="lease">
+          <label class="form-check-label" for="lease">Lease</label>
+        </div>
+        <p class="error-message"></p>
+      </section> -->
+
+      <!-- STEP 3 -->
+      <!-- <section class="survey__panel" data-index="3" data-requirement="option">
+        <h4><b>How many bedrooms do you want?</b></h4>
+        <div class="form-check"><input class="form-check-input" type="radio" name="bedrooms" id="dontKnowYetBedrooms" value="dontKnowYet"><label for="dontKnowYetBedrooms">I don't know yet</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="bedrooms" id="oneBedroom" value="1bedroom"><label for="oneBedroom">1 bedroom</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="bedrooms" id="twoBedroom" value="2bedroom"><label for="twoBedroom">2 bedroom</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="bedrooms" id="threeBedroom" value="3bedroom"><label for="threeBedroom">3 bedroom</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="bedrooms" id="fourMoreBedroom" value="4bedroomPlus"><label for="fourMoreBedroom">4+ bedrooms</label></div>
+        <p class="error-message"></p>
+      </section> -->
+
+      <!-- STEP 4 -->
+      <!-- <section class="survey__panel" data-index="4" data-requirement="option">
+        <h4><b>Specify an acceptable price range</b></h4>
+        <div class="form-check"><input type="radio" class="form-check-input" name="priceRange" id="range1" value="265000-400000"><label for="range1">$265,000 – $400,000</label></div>
+        <div class="form-check"><input type="radio" class="form-check-input" name="priceRange" id="range2" value="400000-600000"><label for="range2">$400,000 – $600,000</label></div>
+        <div class="form-check"><input type="radio" class="form-check-input" name="priceRange" id="range3" value="600000-800000"><label for="range3">$600,000 – $800,000</label></div>
+        <div class="form-check"><input type="radio" class="form-check-input" name="priceRange" id="range4" value="800000-1000000"><label for="range4">$800,000 – $1,000,000</label></div>
+        <div class="form-check"><input type="radio" class="form-check-input" name="priceRange" id="range5" value="1000000-plus"><label for="range5">$1,000,000 and up</label></div>
+        <p class="error-message"></p>
+      </section> -->
+
+
+      <!-- STEP 5 -->
+      <!-- <section class="survey__panel" data-index="5" data-requirement="checkbox">
+        <h4><b>Project delivery/handover date?</b></h4>
+        <div class="form-check"><input type="checkbox" class="form-check-input" name="handoverDates[]" id="newLaunch" value="newLaunch"><label for="newLaunch">New launch</label></div>
+        <div class="form-check"><input type="checkbox" class="form-check-input" name="handoverDates[]" id="year2025" value="2025"><label for="year2025">2025</label></div>
+        <div class="form-check"><input type="checkbox" class="form-check-input" name="handoverDates[]" id="year2026" value="2026"><label for="year2026">2026</label></div>
+        <div class="form-check"><input type="checkbox" class="form-check-input" name="handoverDates[]" id="year2027" value="2027"><label for="year2027">2027</label></div>
+        <p class="error-message"></p>
+      </section> -->
+
+      <!-- STEP 6 -->
+      <!-- <section class="survey__panel" data-index="6" data-requirement="option">
+        <h4><b>How would you prefer to be contacted?</b></h4>
+        <div class="form-check"><input type="radio" class="form-check-input" name="contactMethod" id="contactPhone" value="phone"><label for="contactPhone">Phone Call</label></div>
+        <div class="form-check"><input type="radio" class="form-check-input" name="contactMethod" id="contactEmail" value="email"><label for="contactEmail">Email Reply</label></div>
+        <p class="error-message"></p>
+      </section> -->
+
+<!-- STEP 7  -->
+<section class="survey__panel" data-index="7" data-requirement="name;phone;email">
+  <h4><b>Lastly, enter your contact details</b></h4>
+  <div class="form-check">
+    <div class="input-group">
+      <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+      <input type="text" class="form-control" id="finalName" name="name" placeholder="Your Full Name" required>
+    </div><p class="error-message"></p>
+  </div>
+  <div class="form-check">
+    <div class="input-group">
+      <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+      <input type="tel" class="form-control" id="finalPhone" name="phone" placeholder="+1 555-123-4567" required>
+    </div><p class="error-message"></p>
+  </div>
+
+  <div class="form-check">
+    <div class="input-group">
+      <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+      <input type="email" class="form-control" id="finalEmail" name="email" placeholder="name@example.com" required>
+    </div><p class="error-message"></p>
+  </div>
+</section>
+
+
+      <!-- Navigation Buttons -->
+      <div class="form-buttons">
+        <button type="button" name="prev" disabled>Prev</button>
+        <button type="button" name="next">Next</button>
+        <button type="submit" name="submit" disabled>Submit Inquiry</button>
+      </div>
+
+    </form>
+  </div>
+</section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <div class="content" data-aos="fade-up" data-aos-delay="200">
+              <div class="section-category mb-3">Contact</div>
+              <h2 class="display-5 mb-4">Connect with Africa's Leading Urban Developer</h2>
+              <p class="lead mb-4">Whether you're a potential investor, future homeowner, or development partner, we're here to turn visionary ideas into built realities across Africa.</p>
+              <div class="contact-info mt-5">
+                <div class="info-item d-flex mb-3">
+                  <i class="bi bi-envelope-at me-3"></i>
+                  <span>moyosore.bamigbade@gmail.com</span>
+                </div>
+
+                <div class="info-item d-flex mb-3">
+                  <i class="bi bi-telephone me-3"></i>
+                  <span>+234 (0) 7036532200</span>
+                </div>
+
+                <div class="info-item d-flex mb-4">
+                  <i class="bi bi-geo-alt me-3"></i>
+                  <span>Los Angeles Mall, Ahmadu Bello Way, Abuja, Nigeria</span>
+                </div>
+
+                <a href="#" class="map-link d-inline-flex align-items-center">
+                  Open Map
+                  <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="contact-form card" data-aos="fade-up" data-aos-delay="300">
+              <div class="card-body p-4 p-lg-5">
+
+                <form action="forms/contact.php" method="post" class="php-email-form">
+                  <div class="row gy-4">
+
+                    <div class="col-12">
+                      <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                    </div>
+
+                    <div class="col-12 ">
+                      <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                    </div>
+
+                    <div class="col-12">
+                      <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                    </div>
+
+                    <div class="col-12">
+                      <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                    </div>
+
+                    <div class="col-12 text-center">
+                      <div class="loading">Loading</div>
+                      <div class="error-message"></div>
+                      <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                      <button type="submit" class="btn btn-submit w-100">Submit Message</button>
+                    </div>
+
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">MB URBAN</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
@@ -125,13 +613,21 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/intl-tel-input@18/build/css/intlTelInput.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18/build/js/intlTelInput.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18/build/js/utils.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>

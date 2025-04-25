@@ -1,6 +1,6 @@
 Thanks for downloading this template!
 
-Template Name: Maundy
-Template URL: https://bootstrapmade.com/maundy-free-coming-soon-bootstrap-theme/
+Template Name: EasyFolio
+Template URL: https://bootstrapmade.com/easyfolio-bootstrap-portfolio-template/
 Author: BootstrapMade.com
 License: https://bootstrapmade.com/license/
