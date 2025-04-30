@@ -1461,7 +1461,7 @@ section,
 } */
 /* Ensure the intl-tel-input wrapper spans the full width */
  .iti {
-  width: 90% !important;
+  width: auto !important;
 }
 /* .iti input {
   width: 100% !important;
