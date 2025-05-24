@@ -73,8 +73,9 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+  /* Custom MB-logo cursor */
+  cursor: url('../img/cursor.png') 16 16, auto;
 }
-
 a {
   color: var(--accent-color);
   text-decoration: none;
@@ -923,6 +924,10 @@ section,
   font-size: 1.1rem;
   color: color-mix(in srgb, var(--default-color), transparent 25%);
 }
+/* Justify only <p> tags with class "lead mb-4" inside .about-content */
+.about .about-content p.lead.mb-4 {
+  text-align: justify;
+}
 
 .about .personal-info {
   margin-top: 2rem;
@@ -952,6 +957,7 @@ section,
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  justify-content: center;
 }
 
 .about .signature .signature-image {
